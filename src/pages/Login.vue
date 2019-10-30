@@ -45,7 +45,7 @@ export default {
        submitHandler(){
            this.login(this.form)
            .then(()=>{
-                this.$router.push('/manger');
+                this.$router.push('/home');
            })
         }
     }

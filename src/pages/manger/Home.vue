@@ -15,11 +15,11 @@
                 </van-row>
                   <van-row>
                     <van-col :span="4" style="text-align:center;line-height:2em;color:red;"><van-icon name="label-o"/></van-col>
-                    <van-col :span="20">服务内容：{{o.address.province+""+o.address.city+""+o.address.area}}</van-col>
+                    <van-col :span="20">服务内容：</van-col>
                 </van-row>
                  <van-row>
                     <van-col :span="4" style="text-align:center;line-height:2em;color:red;"><van-icon name="location-o"/></van-col>
-                    <van-col :span="20">地址：</van-col>
+                    <van-col :span="20">地址：{{o.address.province+""+o.address.city+""+o.address.area}}</van-col>
                 </van-row>
                 <div slot="footer" style="text-align:center;margin-top:40px;">
                 <van-button size="small" type="danger" @click.prevent="rejectHandel(o.id)">拒绝</van-button>&nbsp;
@@ -55,7 +55,7 @@ export default {
         rejectHandel(orderId){
             this.rejectOrder(orderId)
             .then((response)=>{
-                this.$$toast(response.statusText)
+                this.$toast(response.statusText)
             })
         }
         

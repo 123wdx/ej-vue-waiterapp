@@ -30,7 +30,7 @@ export default{
             return res;
         },
         //拒绝接单
-        async rejectOrder({context,orderId}){
+        async rejectOrder(context,orderId){
             let res=await get('/order/rejectOrder',{orderId});
             context.dispatch('findWaiterOrders');
             return res;
