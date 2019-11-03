@@ -11,7 +11,7 @@
                 </van-row>
                  <van-row>
                     <van-col :span="4" style="text-align:center;line-height:2em; color:red;"><van-icon name="clock-o"/></van-col>
-                    <van-col :span="20">下单时间：{{o.orderTime}}</van-col>
+                    <van-col :span="20">下单时间：{{o.orderTime|datefmt}}</van-col>
                 </van-row>
                   <van-row>
                     <van-col :span="4" style="text-align:center;line-height:2em;color:red;"><van-icon name="label-o"/></van-col>

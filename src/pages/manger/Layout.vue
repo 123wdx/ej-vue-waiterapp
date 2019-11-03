@@ -9,8 +9,7 @@
     </div>
 </template>
 <script>
-import { mapActions } from 'vuex';
-import {getToken} from '../../utils/auth'
+import { mapActions,mapState } from 'vuex';
 export default {
     data(){
         return{
@@ -19,17 +18,13 @@ export default {
     },
     created(){
         //通过token获取用户信息
-        let token=getToken();
-        if(token){
-            //找token
-            this.getUserInfo(token)
-        }else{
-            this.$toast('token失效');
-            this.$router.push('/');
-        }
+       
+    },
+    computed:{
+        ...mapState('user',['userinfo'])
     },
     methods:{
-        ...mapActions('user',['getUserInfo']),
+     
         tabChanghander(path){
             this.$router.push({path});
         }

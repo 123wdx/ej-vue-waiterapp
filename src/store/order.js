@@ -1,11 +1,11 @@
 import {get} from '../http/axios'
-import { reject } from 'q';
 export default{
     namespaced:true,
     state:{
         orders:[]
     },
     getters:{
+        //根据订单状态进行过滤
         orderStatusFilter(state){
             return(status)=>{
                 return state.orders.filter(item=>item.status===status)

@@ -10,7 +10,7 @@
                 </van-row>
                  <van-row>
                     <van-col :span="4" style="text-align:center;line-height:2em; color:red;"><van-icon name="clock-o"/></van-col>
-                    <van-col :span="20">下单时间：{{o.orderTime}}</van-col>
+                    <van-col :span="20">下单时间：{{o.orderTime|datefmt}}</van-col>
                 </van-row>
                   <van-row>
                     <van-col :span="4" style="text-align:center;line-height:2em;color:red;"><van-icon name="label-o"/></van-col>
@@ -20,10 +20,10 @@
                     <van-col :span="4" style="text-align:center;line-height:2em;color:red;"><van-icon name="location-o"/></van-col>
                     <van-col :span="20">地址：{{o.address.province+""+o.address.city+""+o.address.area}}</van-col>
                 </van-row>
-                <div slot="footer" style="text-align:center;margin-top:40px;">
+                <!-- <div slot="footer" style="text-align:center;margin-top:40px;">
                 <van-button size="small" type="danger" @click.prevent="rejectHandel(o.id)">拒绝</van-button>&nbsp;
                 <van-button size="small" type="primary" @click.prevent='accephandel(o.id)' >接受</van-button> 
-                </div>
+                </div> -->
             </van-panel>
             </van-tab>
             <van-tab title="未接订单">
@@ -34,7 +34,7 @@
                 </van-row>
                  <van-row>
                     <van-col :span="4" style="text-align:center;line-height:2em; color:red;"><van-icon name="clock-o"/></van-col>
-                    <van-col :span="20">下单时间：{{o.orderTime}}</van-col>
+                    <van-col :span="20">下单时间：{{o.orderTime|datefmt}}</van-col>
                 </van-row>
                   <van-row>
                     <van-col :span="4" style="text-align:center;line-height:2em;color:red;"><van-icon name="label-o"/></van-col>
@@ -58,7 +58,7 @@
                 </van-row>
                  <van-row>
                     <van-col :span="4" style="text-align:center;line-height:2em; color:red;"><van-icon name="clock-o"/></van-col>
-                    <van-col :span="20">下单时间：{{o.orderTime}}</van-col>
+                    <van-col :span="20">下单时间：{{o.orderTime | datefmt}}</van-col>
                 </van-row>
                   <van-row>
                     <van-col :span="4" style="text-align:center;line-height:2em;color:red;"><van-icon name="label-o"/></van-col>

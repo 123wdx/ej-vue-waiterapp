@@ -25,8 +25,11 @@
             />
         </van-cell-group>
         <div class="login-submit">
-        <van-button size="default" round style="width:30%" @click="submitHandler" type="info">登录</van-button>
+        <van-button size="default" round style="width:80%" @click="submitHandler" type="info">登录</van-button>
         </div>
+      </div>
+      <div>
+
       </div>
     </div>
 </template>
@@ -54,19 +57,26 @@ export default {
 <style  scoped>
 .log{
     height: 150px;
-    background-color:#1989fa;
-    color: aliceblue;
+    /* background-color:#1989fa; */
+    color:#fff;
     font-size: 30px;
     font-family: '宋体';
     font-weight: bolder;
     text-align: center;
-    line-height: 6rem;
+    line-height: 10rem;
 }
 .hander{
     margin-bottom: 100px;
 }
 .login-submit{
-    margin-left: 180px;
-    margin-top:30px;
+   margin-left: 40px;
+    margin-top:280px;
+    
 }
+#home{
+    background:#75b3f0;
+    filter: blur(0.5px);
+    
+}
+
 </style>
